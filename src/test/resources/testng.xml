@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RozetkaTestSuite">
+    <test name="Registration">
+        <groups>
+            <run>
+                <include name="pageLoad"/>
+                <include name="invalidDataTests"/>
+                <include name="clickElementsTests"/>
+                <include name="validDataTests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="RegistrationTest"/>
+        </classes>
+    </test>
+
+    <test name="Ordering">
+        <classes>
+            <class name="OrderingTest"/>
+        </classes>
+    </test>
+
+    <test name="Rating">
+        <groups>
+            <run>
+                <include name="rating"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="RatingTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart">
+        <groups>
+            <run>
+                <include name="ChangingItemsAmount"/>
+                <include name="AddingAndDeleting"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CartTest"/>
+        </classes>
+    </test>
+</suite>
+
+
+
