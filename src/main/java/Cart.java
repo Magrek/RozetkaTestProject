@@ -227,8 +227,9 @@ public class Cart extends BasePage{
 
         waits.longWaitForElementAvailable(deleteButtons.get(itemNumber - 1));
         deleteButtons.get(itemNumber - 1).click();
+        waits.shortWaitForInvisibilityOfElement(sendingDataGif);
         deletePopups.get(itemNumber - 1).click();
-        waits.longWaitForInvisibilityOfElement(sendingDataGif);
+        waits.shortWaitForInvisibilityOfElement(sendingDataGif);
 
     }
 
